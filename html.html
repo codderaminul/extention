@@ -1,0 +1,39 @@
+<div class="container mt-5 border-bottom border-bottom-10">
+    <div class="form-group mx-auto">
+        <form id="RemoveBG" style="max-width: 550px;margin: 0 auto;">
+            <div id="custom" class="">
+                <label id="selectImage" for="inputTag">
+                    <i class="fa fa-2x fa-camera mt-3"></i> <br/>
+                    Drop your WebP, PNG or JPEG files here!<br/>
+                    <p>Up to 20 images, max 5 MB each.</p>
+                    <input id="inputTag" type="file" name="image" required/>
+                    <br/>
+                    <span class="" id="imageName"></span>
+                </label>
+            </div>
+            <input class="btn btn-dark w-100 mt-3 mb-5" type="submit" value="Submit">
+        </form>
+    </div>
+</div>
+<div class="col-lg-4 col-sm-6 my-auto">
+            <a class="btn btn-success download-btn w-50 py-2 " href="{{ image }}" download="">Download</a>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // RemoveBG 
+    document.getElementById("RemoveBG").addEventListener("click", function(e) {
+       // set preventDefault
+       e.preventDefault();
+
+    });
+
+</script>
+
+<div class="container my-5">
+    <div class="row output">
+        <div class="col-lg-8 col-sm-6">
+            <img class="w-75 h-75" src="{{ image }}"/>
+        </div>
